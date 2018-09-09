@@ -20,6 +20,9 @@ void loop() {
         spdLED /= 2;
         Serial.print(spdLED);
       }
+      else {
+        Serial.print("Max Speed");
+      }
     }
     else if ( incomingByte == '-' ) {
       if ( spdLED < 4000 ) {
@@ -27,7 +30,7 @@ void loop() {
         Serial.print(spdLED);
       }
       else {
-        Serial.print(spdLED);
+        Serial.print("Lowest Speed");
       }
     }
   }
